@@ -506,7 +506,7 @@ data:extend({
     sound = {
       aggregation =
       {
-        max_count = 1,
+        max_count = 4,
         remove = true
       },
       switch_vibration_data =
@@ -514,8 +514,8 @@ data:extend({
         filename = "__base__/sound/fight/medium-explosion.bnvib",
         gain = 0.4
       },
-      audible_distance_modifier = 0.5,
-      variations = sound_variations_with_volume_variations("__base__/sound/fight/medium-explosion", 5, 0.3, 0.4, volume_multiplier("main-menu", 1.2))
+      audible_distance_modifier = 2,
+      variations = sound_variations_with_volume_variations("__base__/sound/fight/medium-explosion", 5, 0.3, 0.4, volume_multiplier("main-menu", 5))
     },
     created_effect =
     {

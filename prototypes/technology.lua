@@ -84,7 +84,13 @@ data:extend({
         {"space-science-pack", 1},
       },
       time = 60
-    }
+    },
+    --[[
+    research_trigger =
+    {
+      type = "mine-entity",
+      entity = "steam-geyser",
+    },]]
   },
   {
     type = "technology",
@@ -99,7 +105,7 @@ data:extend({
       },
     },
     prerequisites = {"planet-discovery-moshine"},
-    unit =
+    --[[unit =
     {
       count = 50,
       ingredients =
@@ -109,7 +115,12 @@ data:extend({
         {"chemical-science-pack", 1},
       },
       time = 60
-    }
+    }]]
+    research_trigger =
+    {
+      type = "mine-entity",
+      entity = "multi-ore_dummy_sand",
+    },
   },
   {
     type = "technology",
@@ -196,7 +207,7 @@ data:extend({
       },
     },
     prerequisites = {"planet-discovery-moshine"},
-    unit =
+    --[[unit =
     {
       count = 50,
       ingredients =
@@ -206,7 +217,12 @@ data:extend({
         {"chemical-science-pack", 1},
       },
       time = 60
-    }
+    }]]
+    research_trigger =
+    {
+      type = "mine-entity",
+      entity = "multi-ore_dummy_neodymium",
+    },
   },
   {
     type = "technology",
@@ -221,7 +237,7 @@ data:extend({
       },
     },
     prerequisites = {"moshine-tech-magnet", "moshine-tech-silicon-cell",},
-    unit =
+    --[[unit =
     {
       count = 200,
       ingredients =
@@ -233,7 +249,13 @@ data:extend({
         {"space-science-pack", 1},
       },
       time = 60
-    }
+    }]]
+    research_trigger =
+    {
+      type = "craft-item",
+      item = "silicon-cell",
+      count = 100
+    },
   },
   {
     type = "technology",
@@ -289,7 +311,7 @@ data:extend({
       type = "craft-item",
       item = "data-processor",
       count = 1
-    }
+    },
   },
   {
     type = "technology",
@@ -360,6 +382,10 @@ data:extend({
       {
         type = "unlock-recipe",
         recipe = "datacell-ai-model-data"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "datacell-remove-ai-model-data"
       },
     },
     prerequisites = {"moshine-tech-3d-data-storage"},

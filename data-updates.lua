@@ -65,7 +65,10 @@ if mods["se-space-trains"] then
     recycling.generate_recycling_recipe(data.raw["recipe"]["space-train-battery-charging-station"])
     recycling.generate_recycling_recipe(data.raw["recipe"]["space-train-battery-pack"])
   else
-    if data.raw.technology["tech-space-trains"] then data.raw.technology["tech-space-trains"].enabled = false end
+    if data.raw.technology["tech-space-trains"] then
+      data.raw.technology["tech-space-trains"].enabled = false
+      data.raw.technology["tech-space-trains"].hidden = true
+    end
 
     if data.raw["locomotive"]["space-locomotive"] then data.raw["locomotive"]["space-locomotive"].hidden = true end
     if data.raw["cargo-wagon"]["space-cargo-wagon"] then data.raw["cargo-wagon"]["space-cargo-wagon"].hidden = true end

@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 2025-10-22
+  Changes:
+    - Replaced laggy menu simulations with 5 new ones
+    - Techs for silicon, magnets are now trigger techs
+    - Added tips-and-tricks moshine briefing
+    - Added recipe to reverse AI model datacell
+    - Fixed robot efficiency not being exactly 1
+  Sound:
+    - Core explosion can have 4 overlapping sounds and can be heard from further away
+  Bugfixes:
+    - Properly hid maglev train tech if it's disabled in settings
+    - Fixed neural computer shadow offset
+    - "Retrieve model from datacell" recipe ordered after AI model
+---------------------------------------------------------------------------------------------------
 Version: 1.1.1
 Date: 2025-10-11
   Bugfixes:

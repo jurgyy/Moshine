@@ -6,51 +6,7 @@ data:extend({
   },
 
 -- entities
-  {
-    type = "recipe",
-    name = "concrete-from-molten-iron-and-sand",
-    category = "metallurgy",
-    icon = "__Moshine__/graphics/icons/concrete-from-molten-iron-and-sand.png",
-    subgroup = "moshine-processes",
-    order = "aab",
-    enabled = false,
-    ingredients =
-    {
-      {type = "fluid", name = "molten-iron", amount = 20},
-      {type = "fluid", name = "water", amount = 100},
-      {type = "item", name = "sand", amount = 80},
-    },
-    energy_required = 10,
-    results = {{type = "item", name = "concrete", amount = 10}},
-    allow_decomposition = false,
-    auto_recycle = false,
-    allow_productivity = true
-  },
-  {
-    type = "recipe",
-    name = "petroleum-from-sand-sulfur-steam-carbon",
-    category = "oil-processing",
-    icon = "__Moshine__/graphics/icons/petroleum-from-sand-sulfur-steam-carbon.png",
-    subgroup = "moshine-processes",
-    order = "aac",
-    enabled = false,
-    ingredients =
-    {
-      {type = "fluid", name = "steam", amount = 50},
-      {type = "item", name = "sand", amount = 40},
-      {type = "item", name = "sulfur", amount = 10},
-      {type = "item", name = "coal", amount = 5},
-    },
-    energy_required = 3,
-    results = {
-      {type = "fluid", name = "petroleum-gas", amount = 100, show_details_in_recipe_tooltip = true},
-      {type = "item", name = "carbon", amount = 2, show_details_in_recipe_tooltip = false},
-    },
-    main_product = "petroleum-gas",
-    allow_decomposition = false,
-    auto_recycle = false,
-    allow_productivity = true
-  },
+
   {
     type = "recipe",
     name = "data-processor",
@@ -189,6 +145,51 @@ data:extend({
   ]]
 
 -- post-nauvis
+  {
+    type = "recipe",
+    name = "concrete-from-molten-iron-and-sand",
+    category = "metallurgy",
+    icon = "__Moshine__/graphics/icons/concrete-from-molten-iron-and-sand.png",
+    subgroup = "moshine-processes",
+    order = "aab",
+    enabled = false,
+    ingredients =
+    {
+      {type = "fluid", name = "molten-iron", amount = 20},
+      {type = "fluid", name = "water", amount = 100},
+      {type = "item", name = "sand", amount = 80},
+    },
+    energy_required = 10,
+    results = {{type = "item", name = "concrete", amount = 10}},
+    allow_decomposition = false,
+    auto_recycle = false,
+    allow_productivity = true
+  },
+  {
+    type = "recipe",
+    name = "petroleum-from-sand-sulfur-steam-carbon",
+    category = "oil-processing",
+    icon = "__Moshine__/graphics/icons/petroleum-from-sand-sulfur-steam-carbon.png",
+    subgroup = "moshine-processes",
+    order = "aac",
+    enabled = false,
+    ingredients =
+    {
+      {type = "fluid", name = "steam", amount = 50},
+      {type = "item", name = "sand", amount = 40},
+      {type = "item", name = "sulfur", amount = 10},
+      {type = "item", name = "coal", amount = 5},
+    },
+    energy_required = 3,
+    results = {
+      {type = "fluid", name = "petroleum-gas", amount = 100, show_details_in_recipe_tooltip = true},
+      {type = "item", name = "carbon", amount = 2, show_details_in_recipe_tooltip = false},
+    },
+    main_product = "petroleum-gas",
+    allow_decomposition = false,
+    auto_recycle = false,
+    allow_productivity = true
+  },
 
   {
     type = "recipe",
@@ -350,8 +351,38 @@ data:extend({
     allow_productivity = false,
     auto_recycle = false,
     enabled = false,
+    allow_decomposition = false,
     crafting_machine_tint = {primary = {106, 196, 230}}, --#6ac4e6
   },
+
+
+  {
+    type = "recipe",
+    name = "datacell-remove-ai-model-data",
+    icon = "__Moshine__/graphics/icons/datacell-remove-ai-model-data.png",
+    category = "data-processing",
+    --subgroup = "moshine-processes",
+    order = "jjk",
+    --order = "ggc",
+    --hide_from_player_crafting = true,
+    energy_required = 15,
+    ingredients = {
+      {type = "item", name = "3d-data-storage", amount = 1},
+      {type = "item", name = "datacell-ai-model-data", amount = 1}
+    },
+    results = {
+      {type = "item", name = "datacell-empty", amount = 1},
+      {type = "item", name = "model-stable", amount = 1},
+    },
+    main_product = "model-stable",
+    allow_productivity = false,
+    auto_recycle = false,
+    enabled = false,
+    hide_from_player_crafting = true,
+    crafting_machine_tint = {primary = {106, 196, 230}}, --#6ac4e6
+    allow_decomposition = false,
+  },
+
   {
     type = "recipe",
     name = "datacell-equation",

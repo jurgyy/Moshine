@@ -421,6 +421,150 @@ data:extend({
     map_color = {r = 189/256, g = 189/256, b = 189/256, a = 1.000},
     map_grid = false
   },
+
+
+
+  {
+    type = "resource",
+    name = "multi-ore_dummy_neodymium",
+    icon = "__Moshine__/graphics/icons/multi-ore.png",
+    flags = {"placeable-neutral"},
+    subgroup="moshine-processes",
+    order="a-a-a",
+    hidden = true,
+    hidden_in_factoriopedia = true,
+    infinite = false,
+    minimum = 6000,
+    normal = 30000,
+    highlight = false,
+    tree_removal_probability = 0.8,
+    tree_removal_max_distance = 32 * 32,
+
+
+    minable =
+    {
+      mining_particle = "iron-ore-particle",
+      mining_time = 2,
+      results =
+      {
+        {
+          type = "item",
+          name = "neodymium",
+          amount = 1,
+          probability = 1 /1000,
+        },
+      }
+    },
+    category = "basic-solid",
+    walking_sound = sounds.ore,
+    collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    randomize_visual_position = true,
+    stage_counts = {0},
+    stages =
+    {
+      sheet = 
+      {
+        filename = "__Moshine-assets__/graphics/entity/multi-ore/multi-ore.png",
+        priority = "extra-high",
+        size = 128,
+        frame_count = 32,
+        variation_count = 1,
+        scale = 0.5,
+      },
+    },
+    stages_effect =
+    {
+      sheet = 
+      {
+        filename = "__Moshine-assets__/graphics/entity/multi-ore/multi-ore-effect.png",
+        priority = "extra-high",
+        size = 128,
+        frame_count = 32,
+        variation_count = 1,
+        scale = 0.5,
+      },
+    },
+    effect_animation_period = 11,
+    effect_animation_period_deviation = 1.2,
+    effect_darkness_multiplier = 3.6,
+    min_effect_alpha = 0.1,
+    max_effect_alpha = 0.3,
+    map_color = {r = 51, g = 229, b = 170, a = 255},
+    mining_visualisation_tint = {r = 130, g = 190, b = 170, a = 255},
+    map_grid = true,
+  },
+
+  {
+    type = "resource",
+    name = "multi-ore_dummy_sand",
+    icon = "__Moshine__/graphics/icons/multi-ore.png",
+    flags = {"placeable-neutral"},
+    subgroup="moshine-processes",
+    order="a-a-a",
+    hidden = true,
+    hidden_in_factoriopedia = true,
+    infinite = false,
+    minimum = 6000,
+    normal = 30000,
+    highlight = false,
+    tree_removal_probability = 0.8,
+    tree_removal_max_distance = 32 * 32,
+
+
+    minable =
+    {
+      mining_particle = "iron-ore-particle",
+      mining_time = 2,
+      results =
+      {
+        {
+          type = "item",
+          name = "sand",
+          amount = 1,
+          probability = 1 /1000,
+        },
+      }
+    },
+    category = "basic-solid",
+    walking_sound = sounds.ore,
+    collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    randomize_visual_position = true,
+    stage_counts = {0},
+    stages =
+    {
+      sheet = 
+      {
+        filename = "__Moshine-assets__/graphics/entity/multi-ore/multi-ore.png",
+        priority = "extra-high",
+        size = 128,
+        frame_count = 32,
+        variation_count = 1,
+        scale = 0.5,
+      },
+    },
+    stages_effect =
+    {
+      sheet = 
+      {
+        filename = "__Moshine-assets__/graphics/entity/multi-ore/multi-ore-effect.png",
+        priority = "extra-high",
+        size = 128,
+        frame_count = 32,
+        variation_count = 1,
+        scale = 0.5,
+      },
+    },
+    effect_animation_period = 11,
+    effect_animation_period_deviation = 1.2,
+    effect_darkness_multiplier = 3.6,
+    min_effect_alpha = 0.1,
+    max_effect_alpha = 0.3,
+    map_color = {r = 51, g = 229, b = 170, a = 255},
+    mining_visualisation_tint = {r = 130, g = 190, b = 170, a = 255},
+    map_grid = true,
+  },
 })
 
 -- compatibility
@@ -428,3 +572,8 @@ if mods["vtk-deep-core-mining"] then
   data.raw["resource"]["multi-ore"].minable.results[2].amount = 512
   data.raw["resource"]["multi-ore"].minable.results[2].probability = 0.006 /100
 end
+
+
+
+
+

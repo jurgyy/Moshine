@@ -311,7 +311,7 @@ data:extend({
       ["magnetic-field"] = 70,
       ["solar-power"] = 4000,
       pressure = 701,
-      gravity = 7,
+      gravity = 7.01,
       ["temperature-celcius"] = 98,
       --solar_flares = 55,
     },

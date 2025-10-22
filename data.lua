@@ -24,5 +24,6 @@ require ("prototypes.entity.aitrainer")
 
 require ("prototypes.achievements")
 require ("prototypes.menu-simulations")
+require ("prototypes_planet.tipsandtricks")
 
 require ("prototypes.compatibility")
