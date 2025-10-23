@@ -59,8 +59,8 @@ menu_sims.aquilo_starter = nil
 menu_sims.nauvis_rocket_factory = nil
 ]]
 
-
-
+local is_game_up_to_date = helpers.compare_versions(helpers.game_version, "2.0.71") >= 0
+if is_game_up_to_date then
 
 menu_sims.moshine_snouz1 = {
   checkboard = false,
@@ -126,20 +126,26 @@ menu_sims.moshine_snouz3 = {
   ]],
 }
 
-menu_sims.moshine_snouz4 = {
-  checkboard = false,
-  game_view_settings = {default_show_value = false, show_shortcut_bar = false, show_quickbar = false, show_tool_bar = false},
-  init_update_count = 60,
-  save = moshine_simulations .. "moshine_snouz4.zip",
-  length = 20 * second,
-  init = [[
-    game.simulation.camera_zoom = 1
-    game.simulation.camera_player = "snouz"
-    game.simulation.camera_position = {-44.5,-45.25}
-    game.simulation.camera_alt_info = false
-    game.simulation.hide_cursor = true
-    game.tick_paused = false
-  ]],
-}
+  local is_game_up_to_date2 = helpers.compare_versions(helpers.game_version, "2.0.72") >= 0
+  if is_game_up_to_date2 then
+
+    menu_sims.moshine_snouz4 = {
+      checkboard = false,
+      game_view_settings = {default_show_value = false, show_shortcut_bar = false, show_quickbar = false, show_tool_bar = false},
+      init_update_count = 60,
+      save = moshine_simulations .. "moshine_snouz4.zip",
+      length = 20 * second,
+      init = [[
+        game.simulation.camera_zoom = 1
+        game.simulation.camera_player = "snouz"
+        game.simulation.camera_position = {-44.5,-45.25}
+        game.simulation.camera_alt_info = false
+        game.simulation.hide_cursor = true
+        game.tick_paused = false
+      ]],
+    }
+  end
 
 -- from the logo: +0 +9.75
+
+end
